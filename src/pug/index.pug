@@ -1,0 +1,181 @@
+extends _layout
+block head
+    - var isHero = true
+    - var pageTitle = 'Ansible Semaphore is a modern open-source UI for Ansible'
+    - var pageDescription = 'If your project has grown and deploying from the terminal is no longer for you then Ansible Semaphore is what you need.'
+
+block content
+    +Hero('Modern UI for Ansible', pageDescription, 'OPEN SOURCE', 'Get Started', 'https://github.com/ansible-semaphore/semaphore/wiki/Installation', '/img/hero.jpg')
+
+    section.section.mt-6.PageSection
+        .container
+            header.PageSection__header.PageSection__header--center
+                h3.title New UI for a good old Ansible
+                h4.subtitle 
+                    | Ansible Semaphore is beautiful web interface for running Ansible playbooks. 
+                    | You no need to change your playbooks to start using it.
+
+            .PageSection__body.PageSection__body--lg
+                +TabView('533px', [{
+                    title: 'Responsive UI',
+                    text: 'Using the dashboard on your phone is just as convenient as using your computer.',
+                    images: [{
+                        src: '/img/responsive-ui-tablet.png',
+                        class: 'UiFeaturesView__responsiveTabletImage',
+                    }, {
+                        src: '/img/responsive-ui-phone.png',
+                        class: 'UiFeaturesView__responsivePhoneImage',
+                    }],
+                }, {
+                    title: 'Intuitive UX',
+                    text: 'A minimum of steps to complete basic tasks.',
+                    videos: [{
+                        src: '/img/intuitive-ui.mp4',
+                        class: 'UiFeaturesView__intitiveUxImage',
+                        poster: '/img/intuitive-ui.jpg',
+                    }],
+                }, {
+                    title: 'Material Design',
+                    text: 'Intuitive and beautiful design language developed by Google.',
+                    linkText: 'Learn more',
+                    linkUrl: 'https://material.io/design',
+                    class: 'UiFeaturesView__materialDesignCard',
+                    images: [{
+                        src: '/img/material-design-1-1.png',
+                        class: 'UiFeaturesView__materialDesignImage11',
+                    }, {
+                        src: '/img/material-design-2-1.png',
+                        class: 'UiFeaturesView__materialDesignImage21',
+                    }, {
+                        src: '/img/material-design-2-2.png',
+                        class: 'UiFeaturesView__materialDesignImage22',
+                    }],
+                }])
+
+    section.section.PageSection
+        .container
+            header.PageSection__header.PageSection__header--center
+                h3.title Secure tasks running
+                h4.subtitle 
+                    | As the number of people working on a project grows, the issue of security begins to play an 
+                    | important role. Ansible Semaphore will enable secure deployment and configuration.
+
+            .PageSection__body.PageSection__body--lg
+                +TabView('533px', [{
+                    title: 'Access Control',
+                    text: 'Give anyone self-service access to the operations capabilities that previously only you could perform.',
+                    videos: [{
+                        src: '/img/access-control.mp4',
+                        class: 'SecurityFeaturesView__screenshot',
+                        poster: '/img/access-control.jpg',
+                    }],
+                }, {
+                    title: 'Logs',
+                    text: 'All activity is recorded in the system. And if necessary, you can easily restore the sequence of events.',
+                    images: [{
+                        src: '/img/logs.jpg',
+                        class: 'SecurityFeaturesView__screenshot',
+                    }],
+                }, {
+                    title: 'Notifications',
+                    text: 'Receive notifications about the completion of tasks to the telegram or by e-mail. Nothing escapes your sight.',
+                    images: [{
+                        src: '/img/notifications.jpg',
+                        class: 'SecurityFeaturesView__screenshot',
+                    }],
+                }])
+
+    section.section.PageSection
+        .container
+            header.PageSection__header.PageSection__header--center
+                h3.title The shift to CI/CD
+                h4.subtitle 
+                    | Each successful project will ultimately require the use of CI/CD practices. 
+                    | We understand this and therefore are actively developing Ansible Semaphore in this direction.
+
+            .PageSection__body.PageSection__body--lg
+                .columns
+                    .column
+                        h5.title.is-5 
+                            | Build &amp; Deploy 
+                            a.isAbsolute.ml-2.tag.is-warning.pr-1(href="https://github.com/ansible-semaphore/semaphore/milestone/8" style="text-decoration: none;")
+                                | v2.8
+                                i.material-icons.is-size-6 keyboard_arrow_right
+                        div The separation of task into build and deployment allows you to safely update your production environment.
+
+                    .column
+                        h5.title.is-5 
+                            | Rollback
+                            a(href="https://github.com/ansible-semaphore/semaphore/milestone/8" class="isAbsolute ml-2 tag is-warning pr-1" style="text-decoration: none;")
+                                | v2.8
+                                i.material-icons.is-size-6 keyboard_arrow_right
+                        div You can always restore a working configuration.
+
+                    .column
+                        h5.title.is-5 Pipelines <span class="isAbsolute ml-2 tag is-danger is-light">Coming soon</span>
+                    
+                        div The pipeline is a key element of any CI/CD system. Thanks to it, the system goes from code to finished product.
+                    
+                //- .columns
+                //-     .column
+                //-         h5.title.is-5 Artefacts <span class="isAbsolute ml-2 tag is-danger is-light">Coming soon</span>
+                //-         div Must have of all CI/CD system. Must have of all CI/CD system. Must have of all CI/CD system. Must have of all CI/CD system.
+
+
+                //-     .column
+                //-         h5.title.is-5 Monitoring <span class="isAbsolute ml-2 tag is-danger is-light">Coming soon</span>
+                //-         div Must have of all CI/CD system. Must have of all CI/CD system. Must have of all CI/CD system. Must have of all CI/CD system.
+                    
+                //-     .column
+                //-         h5.title.is-5 Integrations <span class="isAbsolute ml-2 tag is-danger is-light">Coming soon</span>
+                //-         div Must have of all CI/CD system. Must have of all CI/CD system. Must have of all CI/CD system. Must have of all CI/CD system.
+
+
+    section.section.PageSection
+        .container
+            header.PageSection__header.PageSection__header--center
+                h3.title Designed for DevOps
+                h4.subtitle 
+                    | Ansible Semaphore started out as a self-service project. 
+                    | Therefore, if you are a DevOps engineer, you will love our development stack.
+            
+            .PageSection__body.PageSection__body--lg
+                .columns
+                    .column
+                        h5.title.is-5 Pure Go
+                        div Ansible Semaphore is written in Pure Go. This means that you can cross-compile it for many platforms. And this is one of the reasons why DevOps engineers choose Go.
+                    .column
+                        h5.title.is-5 Docker
+                        div We use Docker for integration testing. For each release, an Docker image is automatically created on Docker Hub.
+                    .column
+                        h5.title.is-5 
+                            | MySQL
+                            a(href="https://github.com/ansible-semaphore/semaphore/milestone/7" class="isAbsolute ml-2 tag is-warning pr-1" style="text-decoration: none;")
+                                | PostgreSQL and BoltDB
+                                i.material-icons.is-size-6 keyboard_arrow_right
+                        div You will be able to choose the database that suits you. You don't have to maintain another database.
+                //- .columns
+                //-     .column
+                //-         h5.title.is-5 Vue.js
+                //-         div Must have of all CI/CD system. Must have of all CI/CD system. Must have of all CI/CD system. Must have of all CI/CD system.
+
+                //-     .column
+                //-         h5.title.is-5 Community
+                //-         div Must have of all CI/CD system. Must have of all CI/CD system. Must have of all CI/CD system. Must have of all CI/CD system.
+
+                //-     .column
+                //-         h5.title.is-5 CLI <span class="isAbsolute ml-2 tag is-danger is-light">Coming soon</span>
+                //-         div Must have of all CI/CD system. Must have of all CI/CD system. Must have of all CI/CD system. Must have of all CI/CD system.
+
+    section.section.PageSection
+        .container
+            header.PageSection__header.PageSection__header--center
+                h3.title Contibution
+                h4.subtitle Our code is easy and understandable.
+                a.button.is-primary.is-large.is-rounded(href="https://github.com/ansible-semaphore/semaphore")
+                    span.icon.mr-3
+                        img(src="/img/GitHub-Mark-Light-120px-plus.png")
+                    span Join us on GitHub
+                    span.icon
+                        i.material-icons.is-size-3 keyboard_arrow_right
+        

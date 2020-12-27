@@ -1,0 +1,23 @@
+{
+    "liveServer.settings.root": "/dist/",
+    "filewatcher.commands": [
+        {
+            "match": "\\.pug$",
+            "isAsync": true,
+            "cmd": "cd ${workspaceRoot} && ${workspaceRoot}/node_modules/.bin/gulp html",
+            "event": "onFileChange"
+        },
+        {
+            "match": "\\.scss$",
+            "isAsync": true,
+            "cmd": "cd ${workspaceRoot} && ${workspaceRoot}/node_modules/.bin/gulp css",
+            "event": "onFileChange"
+        },
+        {
+            "match": "\\.js$",
+            "isAsync": true,
+            "cmd": "cd ${workspaceRoot} && ${workspaceRoot}/node_modules/.bin/gulp js",
+            "event": "onFileChange"
+        }
+    ]
+}

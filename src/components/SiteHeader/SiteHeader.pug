@@ -1,0 +1,31 @@
+mixin SiteHeader(isHero)
+    nav.navbar.is-primary.Navbar(class=(isHero ? 'Navbar--hero' : ''))
+        .container
+            .navbar-brand
+                a.navbar-item(href="/")
+                    .SiteHeaderLogo
+                        .SiteHeaderLogoIcon
+                            .SiteHeaderLogoIcon__circle
+                            .SiteHeaderLogoIcon__circle
+                            .SiteHeaderLogoIcon__circle
+                        .SiteHeaderLogoText ansible semaphore
+
+                a.navbar-burger.burger(role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample")
+                    span(aria-hidden="true")
+                    span(aria-hidden="true")
+                    span(aria-hidden="true")
+
+            .navbar-menu
+                .navbar-end
+                    //- a.navbar-item(href="https://ansiphore.com") Cloud Demo
+                    a.navbar-item(href="https://github.com/ansible-semaphore/semaphore/wiki") Docs
+                    .navbar-item.pr-0
+                        a.button.is-white(href="https://github.com/ansible-semaphore/semaphore")
+                            span.icon
+                                i.material-icons grade
+                            span 3.5k
+                    .navbar-item.pr-0
+                        a.button.is-success(href="https://github.com/ansible-semaphore/semaphore/wiki/Installation")
+                            span.icon
+                                i.material-icons download
+                            span Install

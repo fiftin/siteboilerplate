@@ -1,0 +1,77 @@
+$heroTextWidth: 600px;
+$heroImageHeight: 600px;
+$heroBodyHeight: 700px;
+
+$heroImageOrigHeight: 1536px;
+$heroImageOrigWidth: 2048;
+
+$heroTitleFontFamily: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+.Hero {
+    overflow: hidden;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-image: linear-gradient(219deg, #008890 14%, #005057 65%);
+}
+
+.Hero__body {
+    height: $heroBodyHeight;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.Hero__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: static;
+}
+
+.Hero__caption {
+    font-weight: bold;
+    padding-left: 5px;
+    color: #F0FFCF;
+}
+
+.Hero__title {
+    font-size: 120px;
+    color: white;
+    font-weight: 600;
+    line-height: 1.05;
+    margin-bottom: 20px;
+    font-family: $heroTitleFontFamily;
+    background: linear-gradient(171deg, #F0FFCF 0%, #D8D8D8 66%, #B89494 66%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.Hero__subtitle {
+    color: white;
+    margin-bottom: 30px !important;
+}
+
+.Hero__text {
+    max-width: $heroTextWidth;
+}
+
+.Hero__image {
+    width: calc(100% - 50px - #{$heroTextWidth});
+}
+
+.Hero__img {
+    border-radius: 6px;
+    background-size: contain;
+    background-position: left center;
+    position: absolute;
+    height: $heroImageHeight;
+    width: $heroImageHeight * ($heroImageOrigWidth / $heroImageOrigHeight);
+    top: ($heroBodyHeight - $heroImageHeight) / 2;
+}
+
+@include mobile {
+    .Hero__title {
+        font-size: 70px;
+    }
+}

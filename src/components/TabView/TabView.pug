@@ -1,0 +1,35 @@
+mixin TabView(containerHeight, items)
+    .TabView
+        .TabView__container.TabView__container--no-transition
+            .TabView__copies.is-hidden-touch
+                .TabView__copyContainer
+                    each item in items
+                        .TabView__copy
+                            h5.TabView__copyTitle= item.title
+                            .TabView__copyText= item.text
+                            if (item.linkText)
+                                a.TabView__copyLink.mt-3(href=item.linkUrl style="display: inline-block;")
+                                    span= item.linkText
+                                    span.icon.isAbsolute(style="margin-top: 1px;")
+                                        i.material-icons.is-size-5 keyboard_arrow_right
+            .TabView__body
+                .TabView__tabs
+                    .TabView__tabBackContainer
+                        each item, index in items
+                            button.TabView__tab(class=(index == 0 ? 'TabView__tab--active' : ''))= item.title
+                    .TabView__tabFrontContainer.TabView__tabFrontContainer--hidden
+                        each item in items
+                            button.TabView__tab.TabView__tab--active= item.title
+                .TabView__cards
+                    .TabView__cardContainer(style="height: " + containerHeight)
+                        each item in items.reverse()
+                            .TabView__card(class=item.class)
+                                each video in (item.videos || [])
+                                    video(class=video.class autoplay loop muted poster=video.poster)
+                                        source(src=video.src type="video/mp4")
+                                each image in (item.images || [])
+                                    img.TabView__cardImage(src=image.src class=image.class)
+        script.
+            (function () {
+                new TabView(document.scripts[document.scripts.length - 1].parentNode);
+            }());

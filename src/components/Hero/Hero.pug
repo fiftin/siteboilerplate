@@ -1,0 +1,14 @@
+mixin Hero(title, description, caption, buttonTitle, buttonUrl, imageUrl)
+    section.section.Hero
+            .Hero__body
+                .container.Hero__container
+                    header.Hero__text
+                        .Hero__caption.is-size-5= caption
+                        h1.Hero__title= title
+                        h2.subtitle.Hero__subtitle= description
+                        a.button.is-primary.is-rounded.is-medium(href=buttonUrl)
+                            span= buttonTitle
+                            span.icon
+                                i.material-icons.is-size-4 keyboard_arrow_right
+                    .Hero__image
+                        .Hero__img(style="background-image: url(" + imageUrl + ")")

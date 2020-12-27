@@ -1,0 +1,5 @@
+/.idea/
+/dist/
+/node_modules
+/invs/*/files/vars.json
+.DS_Store

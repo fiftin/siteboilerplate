@@ -1,0 +1,104 @@
+
+$materialDesignImageScale: 0.55;
+
+.UiFeaturesView__responsivePhoneImage,
+.UiFeaturesView__responsiveTabletImage,
+.UiFeaturesView__materialDesignImage,
+.UiFeaturesView__intitiveUxImage {
+    position: absolute;
+    min-width: initial;
+    max-width: initial;
+    transition: 0.8s;
+    box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+}
+
+.UiFeaturesView__responsivePhoneImage {
+    top: 50px;
+    width: 400px;
+    border-radius: 63px;
+    transform: translate(-700px, 900px) rotate(45deg) scale(1.6);
+}
+
+.UiFeaturesView__responsiveTabletImage {
+    width: 1000px;
+    border-radius: 36px;
+    left: 330px;
+    transform: translate(1000px, 780px) rotate(-45deg) scale(1.6);
+}
+
+.UiFeaturesView__intitiveUxImage {
+    transform: translateY(110px);
+    border-radius: 6px;
+    transition: 0.5s;
+    max-width: 100%;
+    transition-timing-function: ease-out;
+    visibility: hidden;
+}
+
+.UiFeaturesView__materialDesignImage11,
+.UiFeaturesView__materialDesignImage21,
+.UiFeaturesView__materialDesignImage22 {
+    position: absolute;
+    min-width: initial;
+    max-width: initial;
+    transition: 0.8s;
+}
+
+.UiFeaturesView__materialDesignCard {
+    z-index: 1;
+}
+
+.UiFeaturesView__materialDesignImage11 {
+    left: 0;
+    top: 0;
+    width: 1136 * $materialDesignImageScale;
+    transform: translate(-300px, 840px) rotate(20deg) scale(1.3);
+}
+
+.UiFeaturesView__materialDesignImage21 {
+    left: 1136 * $materialDesignImageScale;
+    top: 0;
+    width: 528 * $materialDesignImageScale;
+    transform: translate(500px, -160px) rotate(-40deg) scale(1.3);
+}
+
+.UiFeaturesView__materialDesignImage22 {
+    left: 1136 * $materialDesignImageScale;
+    top: 464 * $materialDesignImageScale;
+    width: 528 * $materialDesignImageScale;
+    transform: translate(400px, 200px) rotate(35deg) scale(1.3);
+}
+
+.TabView__card--active + .TabView__card {
+    .UiFeaturesView__intitiveUxImage {
+        transform: translateY(0);
+        transition: 1s;
+        box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.TabView__card--active {
+    .UiFeaturesView__responsivePhoneImage,
+    .UiFeaturesView__responsiveTabletImage,
+    .UiFeaturesView__materialDesignImage,
+    .UiFeaturesView__intitiveUxImage,
+    .UiFeaturesView__materialDesignImage11,
+    .UiFeaturesView__materialDesignImage21,
+    .UiFeaturesView__materialDesignImage22 {
+        transform: translate(0, 0) rotate(0) scale(1);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.SecurityFeaturesView__screenshot {
+    border-radius: 6px;
+    box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+}
+
+.TabView__card--active {
+    .SecurityFeaturesView__screenshot {
+        visibility: visible;
+    }
+}

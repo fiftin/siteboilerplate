@@ -1,0 +1,2 @@
+aws_region:         eu-central-1
+website_bucket:     my-website-bucket-prod

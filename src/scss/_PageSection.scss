@@ -1,0 +1,32 @@
+.PageSection__header {
+    max-width: 700px;
+}
+
+.PageSection {
+    overflow: hidden;
+    border-bottom: 1px dashed lightgray;
+    &:last-child {
+        border-bottom: 0;
+    }
+}
+
+.PageSection__header--center {
+    text-align: center;
+    margin: auto;
+}
+
+.PageSection__body {
+    padding-top: 30px;
+}
+
+
+.PageSection__body--lg {
+    padding-top: 60px;
+}
+
+@include desktop {
+    .PageSection {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}

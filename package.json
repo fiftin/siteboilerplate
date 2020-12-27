@@ -1,0 +1,33 @@
+{
+  "name": "ansible-semaphore.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd deploy && ./run.sh prod build",
+    "dev": "cd deploy && ./run.sh dev deploy",
+    "prod": "cd deploy && ./run.sh prod deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiftin/ansible-semaphore.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fiftin/ansible-semaphore.com/issues"
+  },
+  "homepage": "https://github.com/fiftin/ansible-semaphore.com#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject": "^5.0.5",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0"
+  },
+  "dependencies": {
+    "bulma": "^0.9.1"
+  }
+}

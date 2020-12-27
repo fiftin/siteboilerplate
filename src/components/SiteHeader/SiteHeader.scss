@@ -1,0 +1,45 @@
+$siteHeaderLogoIconWidth: 36px;
+$siteHeaderLogoIconCircleGap: 0.3 * $siteHeaderLogoIconWidth / 3;
+$siteHeaderLogoIconCircleWidth: $siteHeaderLogoIconWidth / 3 - $siteHeaderLogoIconCircleGap;
+$siteHeaderLogoFontFamily: "Josefin Sans", sans-serif;
+$navbarFontFamily: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+.SiteHeaderLogo {
+    display: flex;
+    flex-direction: row;
+}
+
+.SiteHeaderLogoIcon {
+    width: $siteHeaderLogoIconWidth;
+    height: $siteHeaderLogoIconWidth;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.SiteHeaderLogoIcon__circle {
+    border-radius: 1000px;
+    width: $siteHeaderLogoIconCircleWidth;
+    height: $siteHeaderLogoIconCircleWidth;
+    margin-bottom: $siteHeaderLogoIconCircleGap;
+    background: white;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.SiteHeaderLogoText {
+    font-weight: bold;
+    font-size: 24px;
+    font-family: $siteHeaderLogoFontFamily;
+}
+
+.Navbar {
+    font-family: $navbarFontFamily;
+}
+
+.Navbar--hero {
+    position: absolute;
+    width: 100%;
+    background: transparent !important;
+}

@@ -5,7 +5,7 @@ $fullhd-enabled: false;
 $button-focus-box-shadow-size: 0;
 $family-sans-serif: "Source Sans Pro", sans-serif;
 
-@import "fonts";
+@import "../../gens/fonts";
 
 @import "../../node_modules/bulma/bulma";
 
@@ -43,5 +43,5 @@ $family-sans-serif: "Source Sans Pro", sans-serif;
 }
 
 @import "PageSection";
-@import "components";
+@import "../../gens/components";
 @import "index";

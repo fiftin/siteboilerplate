@@ -135,8 +135,8 @@ function getFontFace(filepath, file) {
 }
 
 function injectFontLinks() {
-  return src('src/pug/_fonts.pug')
-    .pipe(inject(src('src/fonts/*.*', {read: false}), {
+  return src('src/gens/fonts.pug')
+    .pipe(inject(src('src/assets/fonts/*.*', {read: false}), {
       starttag: '<!-- inject:font-link -->',
       endtag: '<!-- endinject -->',
       transform: (filepath) => {
@@ -144,7 +144,7 @@ function injectFontLinks() {
         return `link(rel="preload" href="${url}" as="font")`;
       },
     }))
-    .pipe(dest('src/pug/'));
+    .pipe(dest('src/gens/fonts.pug'));
 }
 
 function injectFontsToScss() {

@@ -9,6 +9,7 @@ Cloud Site Builderplate is a start point for creating a cloud-based (initially s
 | Terraform              | Cloud resources |
 | Pug                    | Pages           |
 | SCSS                   | Design          |
+| Bulma                  | UI Framework    |
 | Visual Studio Core     | Code writing    |
 | Component architecture | Code quality    |
 

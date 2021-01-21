@@ -134,8 +134,17 @@ function getFontFace(filepath, file) {
   ].map((line, index) => file.contents ? line : (index > 0 ? `  ${line}` : line)).join('\n') + '\n';
 }
 
+function injectFontsToScss() {
+  return src('src/templates/fonts.scss')
+    .pipe(inject(src('src/assets/fonts/*.*', {read: true}), {
+      relative: true,
+      transform: getFontFace,
+    }))
+    .pipe(dest('src/gens'));
+}
+
 function injectFontLinks() {
-  return src('src/gens/fonts.pug')
+  return src('src/templates/fonts.pug')
     .pipe(inject(src('src/assets/fonts/*.*', {read: false}), {
       starttag: '<!-- inject:font-link -->',
       endtag: '<!-- endinject -->',
@@ -144,40 +153,32 @@ function injectFontLinks() {
         return `link(rel="preload" href="${url}" as="font")`;
       },
     }))
-    .pipe(dest('src/gens/fonts.pug'));
-}
-
-function injectFontsToScss() {
-  return src('src/scss/_fonts.scss')
-    .pipe(inject(src('src/fonts/*.*', {read: true}), {
-      relative: true,
-      transform: getFontFace,
-    }))
-    .pipe(dest('src/scss/'));
+    .pipe(dest('src/gens'));
 }
 
 function injectFontFaces() {
-  return src('src/pug/_fonts.pug')
-    .pipe(inject(src('src/fonts/*.*', {read: false}), {
+  return src('src/gens/fonts.pug')
+    .pipe(inject(src('src/assets/fonts/*.*', {read: false}), {
       starttag: '/* inject:font-face */',
       endtag: '/* endinject */',
       transform: getFontFace,
     }))
-    .pipe(dest('src/pug/'));
+    .pipe(dest('src/gens'));
 }
 
+
 function copyFonts() {
-  return src('src/fonts/*').pipe(dest('dist/fonts/'));
+  return src('src/assets/fonts/*').pipe(dest('dist/fonts/'));
 }
 
 function injectComponentsPug() {
-  return src('src/pug/_components.pug')
+  return src('src/templates/components.pug')
     .pipe(inject(src('src/components/**/*.pug', {read: false}), {relative: true}))
-    .pipe(dest('src/pug/'));
+    .pipe(dest('src/gens'));
 }
 
 function compilePug() {
-  return src('src/pug/**/index.pug')
+  return src('src/pages/**/index.pug')
     .pipe(pug({
       pretty: true,
       locals: {build_version, need_counters},
@@ -186,13 +187,13 @@ function compilePug() {
 }
 
 function injectComponentsScss() {
-  return src('src/scss/_components.scss')
+  return src('src/templates/components.scss')
     .pipe(inject(src('src/components/**/*.scss', {read: false}), {relative: true}))
-    .pipe(dest('src/scss/'));
+    .pipe(dest('src/gens/'));
 }
 
 function compileScss() {
-  return src('src/scss/*.scss', '!src/scss/_*.scss')
+  return src('src/assets/css/*.scss', '!src/assets/css/_*.scss')
     .pipe(sass())
     .pipe(dest('dist/css/'));
 }
@@ -215,7 +216,8 @@ function copyJs() {
 }
 
 const html = series(injectComponentsPug, compilePug);
-const fonts = parallel(copyFonts, injectFontFaces, injectFontLinks, injectFontsToScss);
+const injectFontsToPug = series(injectFontLinks, injectFontFaces);
+const fonts = parallel(copyFonts, injectFontsToPug, injectFontsToScss);
 const css = parallel(injectComponentsScss, compileScss);
 const js = parallel(componentsJs, copyJs);
 const img = copyImages;
@@ -224,6 +226,7 @@ const build = parallel(css, series(fonts, html), js, img);
 module.exports = {
   injectFontFaces,
   injectFontLinks,
+  injectFontsToPug,
   injectFontsToScss,
   img,
   js,

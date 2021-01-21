@@ -5,3 +5,4 @@
 .DS_Store
 /deploy/invs/dev/files/secrets.yml
 /deploy/invs/prod/files/secrets.yml
+/gens/

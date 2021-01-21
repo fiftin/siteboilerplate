@@ -22,38 +22,35 @@ Cloud Site Builderplate is a start point for creating a cloud-based website. It 
     * Live Server (ritwickdey.liveserver)
     * File Watcher (appulate.filewatcher)
 
-### Test
+### 1. Test
 
-1. Build the project
+Build the project
 
-    ```
     npm run build
-    ```
 
-2. Run Live Server
+Run Live Server
 
 
-### Deploy
+### 2. Setup
 
-3. Setup the project (NOT IMPLEMENTED!!!)
+_NOT IMPLEMENTED!!!_
 
-    ```
     npm run setup example
-    ```
 
-4. Deploy website to AWS
+### 3. Deploy
 
-    ```
+Deploy website to AWS
+
     npm run deploy example
-    ```
 
-### Destroy
+### 4. Destroy
+_NOT IMPLEMENTED!!!_
 
-    ```
-    npm run destroy
-    ```
+    npm run destroy example
 
-### How setup should works (NOT IMPLEMENTED!!! you should do it manually)
+### How setup should works
+
+_NOT IMPLEMENTED!!! you should do it manually_
 
 1. Ask the user to the AWS access key. (required)
 

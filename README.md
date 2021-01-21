@@ -20,8 +20,8 @@ Cloud Site Builderplate is a start point for creating a cloud-based (initially s
 * Ansible 2.9+
 * Node.js 14.15.0+
 * Visual Studio Code with plugins:
-    * Live Server ([https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer](ritwickdey.liveserver))
-    * File Watcher ([https://marketplace.visualstudio.com/items?itemName=appulate.filewatcher](appulate.filewatcher))
+    * Live Server ([ritwickdey.liveserver](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer))
+    * File Watcher ([appulate.filewatcher](https://marketplace.visualstudio.com/items?itemName=appulate.filewatcher))
 
 ### 1. Test
 

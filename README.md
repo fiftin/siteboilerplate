@@ -1,6 +1,6 @@
 ## What is it?
 
-Cloud Site Builderplate is a start point for creating a cloud-based website. It has a modern stack:
+Cloud Site Builderplate is a start point for creating a cloud-based (initially static, but can be easy extended) website. It has a modern stack:
 
 | Technology             | Responsibility  |
 |------------------------|-----------------|

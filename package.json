@@ -1,23 +1,23 @@
 {
-  "name": "ansible-semaphore.com",
+  "name": "cloud-site-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cd deploy && ./run.sh prod build",
-    "dev": "cd deploy && ./run.sh dev deploy",
-    "prod": "cd deploy && ./run.sh prod deploy"
+    "build": "cd deploy && gulp build",
+    "deploy": "echo 'NOT IMPLEMENTED!!!'",
+    "setup": "echo 'NOT IMPLEMENTED!!!'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fiftin/ansible-semaphore.com.git"
+    "url": "git+https://github.com/fiftin/cloud-site-boilerplate.git"
   },
-  "author": "",
+  "author": "Denis Gukov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fiftin/ansible-semaphore.com/issues"
+    "url": "https://github.com/fiftin/cloud-site-boilerplate/issues"
   },
-  "homepage": "https://github.com/fiftin/ansible-semaphore.com#readme",
+  "homepage": "https://github.com/fiftin/cloud-site-boilerplate#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",

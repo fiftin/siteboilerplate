@@ -27,7 +27,7 @@ Cloud Site Builderplate is a start point for creating a cloud-based website. It 
 1. Build the project
 
     ```
-    npm run local
+    npm run build
     ```
 
 2. Run Live Server
@@ -35,16 +35,16 @@ Cloud Site Builderplate is a start point for creating a cloud-based website. It 
 
 ### Deploy
 
-3. Setup the project
+3. Setup the project (NOT IMPLEMENTED!!!)
 
     ```
-    npm run setup
+    npm run setup example
     ```
 
 4. Deploy website to AWS
 
     ```
-    npm run dev
+    npm run deploy example
     ```
 
 ### Destroy
@@ -53,16 +53,17 @@ Cloud Site Builderplate is a start point for creating a cloud-based website. It 
     npm run destroy
     ```
 
-### How setup works
+### How setup should works (NOT IMPLEMENTED!!! you should do it manually)
 
 1. Ask the user to the AWS access key. (required)
 
 2. Ask the user to the AWS access secret (required)
 
 3. Ask the user to a domain name (optional)
-    * Requst SSL Certificate (if domain name provided)
+    With using Terraform:
     * Create S3 bucket
     * Create Lambda@Edge
+    * Requst SSL Certificate (if domain name provided)
     * Create CloudFront distribution
 
 4. Ask the user to add a CNAME record to confirm domain owning (if domain name provided)

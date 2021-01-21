@@ -1,0 +1,2 @@
+aws_region:         aws-region-where-your-bucket-should-exists
+website_bucket:     your-aws-s3-bucket

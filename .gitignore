@@ -1,8 +1,6 @@
 /.idea/
+.DS_Store
 /dist/
 /node_modules
-/invs/*/files/vars.json
-.DS_Store
-/deploy/invs/dev/files/secrets.yml
-/deploy/invs/prod/files/secrets.yml
+/deploy/invs/*/files/secrets.yml
 /src/gens/

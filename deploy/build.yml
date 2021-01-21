@@ -1,4 +1,0 @@
----
-- hosts: site
-  roles:
-    - build

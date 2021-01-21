@@ -217,7 +217,7 @@ function copyJs() {
 
 const html = series(injectComponentsPug, compilePug);
 const injectFontsToPug = series(injectFontLinks, injectFontFaces);
-const fonts = parallel(copyFonts, injectFontsToPug, injectFontsToScss);
+const fonts = parallel(/*copyFonts, */injectFontsToPug, injectFontsToScss);
 const css = series(injectFontsToScss, injectComponentsScss, compileScss);
 const js = parallel(componentsJs, copyJs);
 const img = copyImages;

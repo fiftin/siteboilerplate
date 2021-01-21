@@ -1,0 +1,1 @@
+Contains templates which required for generation of the `/src/gens/*.*` files.

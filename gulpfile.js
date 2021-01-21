@@ -199,7 +199,7 @@ function compileScss() {
 }
 
 function copyImages() {
-  return src('src/img/*')
+  return src('src/assets/img/*')
       .pipe(dest('dist/img/'));
 }
 

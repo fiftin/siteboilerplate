@@ -6,7 +6,8 @@
   "scripts": {
     "build": "cd deploy && gulp build",
     "deploy": "echo 'NOT IMPLEMENTED!!!'",
-    "setup": "echo 'NOT IMPLEMENTED!!!'"
+    "setup": "echo 'NOT IMPLEMENTED!!!'",
+    "install": "echo 'NOT IMPLEMENTED!!!'"
   },
   "repository": {
     "type": "git",

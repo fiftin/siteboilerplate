@@ -30,7 +30,7 @@ Build the project
     npm run build
 
 Run Live Server
-
+![](/src/templates/how-to-go-live.png)
 
 ### 2. Setup
 

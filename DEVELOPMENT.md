@@ -6,7 +6,6 @@
             - dev
             - prod
             - staging
-    - infrastructure (NOT IMPLEMENTED!!!)
     - src
         - assets
         - compoments

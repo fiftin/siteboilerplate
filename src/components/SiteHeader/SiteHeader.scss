@@ -1,6 +1,8 @@
+@use "sass:math";
+
 $siteHeaderLogoIconWidth: 36px;
-$siteHeaderLogoIconCircleGap: 0.3 * $siteHeaderLogoIconWidth / 3;
-$siteHeaderLogoIconCircleWidth: $siteHeaderLogoIconWidth / 3 - $siteHeaderLogoIconCircleGap;
+$siteHeaderLogoIconCircleGap: 0.3 * math.div($siteHeaderLogoIconWidth, 3);
+$siteHeaderLogoIconCircleWidth: math.div($siteHeaderLogoIconWidth, 3) - $siteHeaderLogoIconCircleGap;
 $siteHeaderLogoFontFamily: "Josefin Sans", sans-serif;
 $navbarFontFamily: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 

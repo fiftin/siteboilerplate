@@ -212,7 +212,7 @@ function componentsJs() {
 }
 
 function copyJs() {
-  return src('src/js/*').pipe(dest('dist/js/'));
+  return src('src/assets/js/*').pipe(dest('dist/js/'));
 }
 
 const html = series(injectComponentsPug, compilePug);

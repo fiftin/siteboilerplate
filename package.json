@@ -25,10 +25,11 @@
     "gulp-concat": "^2.6.1",
     "gulp-inject": "^5.0.5",
     "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^3.0.0"
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.54.4"
   },
   "dependencies": {
-    "bulma": "^0.9.1"
+    "bulma": "^0.9.4"
   }
 }

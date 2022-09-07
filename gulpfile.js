@@ -1,5 +1,5 @@
 const {src, dest, series, parallel} = require('gulp'),
-  sass = require('gulp-sass'),
+  sass = require('gulp-sass')(require('sass')),
   pug = require('gulp-pug'),
   concat = require('gulp-concat'),
   sourcemaps = require('gulp-sourcemaps'),
